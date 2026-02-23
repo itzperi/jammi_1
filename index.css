@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #d58a30;
+  --color-saffron: #D4882E;
+  --color-forest: #1B3022;
+  --color-cream-dark: #F0E8DC;
+  --color-background-light: #FAF9F6;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-dm: "DM Sans", sans-serif;
+}
+
+@layer utilities {
+  .grain-texture {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2NUbxbD7Xx8BIQFYdrk6FXiOuWjDPYBuKswv9Fyr9q18CDhV6BA9B5K9y3j8VSozm9ynAL5kQDR6Z8WiUnwP1II6RB-GoHqNzh-ukZs1NyneMYdVXx-RoJIY18qrhNDATmPqPy6UEmHwAiXXhPj61qWCotlbTnQ_1TzqAYeDu31dlCEHbqss_wNz4ZC1izUqR7yCj1loF_82u1uDfoli7ayVQnxHrgd60sDBxdwD47vThdJ5QW8z0llOCoQdLKznsaQpdAl6JjgY");
+    background-blend-mode: overlay;
+  }
+  .glass-header {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(240, 232, 220, 0.5);
+  }
+  .paper-grain {
+    position: relative;
+  }
+  .paper-grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    pointer-events: none;
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2NUbxbD7Xx8BIQFYdrk6FXiOuWjDPYBuKswv9Fyr9q18CDhV6BA9B5K9y3j8VSozm9ynAL5kQDR6Z8WiUnwP1II6RB-GoHqNzh-ukZs1NyneMYdVXx-RoJIY18qrhNDATmPqPy6UEmHwAiXXhPj61qWCotlbTnQ_1TzqAYeDu31dlCEHbqss_wNz4ZC1izUqR7yCj1loF_82u1uDfoli7ayVQnxHrgd60sDBxdwD47vThdJ5QW8z0llOCoQdLKznsaQpdAl6JjgY");
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
+
+body {
+  @apply bg-background-light font-sans text-[#1a150f];
+}
