@@ -5,7 +5,7 @@ import { MOCK_PRODUCTS } from '../constants';
 
 const Shop: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('All');
-  const categories = ['All', 'Skincare', 'Hair Care', 'Wellness', 'Heritage'];
+  const categories = ['All', 'Skin & Hair Care', 'Wellness', 'Therapeutics', 'Body Care', 'Oral Care & Wellness'];
 
   // Scroll to top on mount
   useEffect(() => {
@@ -22,7 +22,7 @@ const Shop: React.FC = () => {
           </div>
           <div className="flex gap-4 overflow-x-auto pb-2 w-full md:w-auto no-scrollbar">
             {categories.map((cat) => (
-              <button 
+              <button
                 key={cat}
                 className={`px-6 py-2 rounded-full text-sm font-bold tracking-widest uppercase transition-all whitespace-nowrap ${activeCategory === cat ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-white text-slate-400 hover:text-primary border border-primary/5'}`}
                 onClick={() => setActiveCategory(cat)}
