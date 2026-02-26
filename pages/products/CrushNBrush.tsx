@@ -1,240 +1,133 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import ReviewSystem from '../../components/ReviewSystem';
+import SmartRecommendations from '../../components/SmartRecommendations';
 
-const CrushNBrush = () => {
+const CrushNBrush: React.FC = () => {
+    const [quantity, setQuantity] = useState(1);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const handleQuantityChange = (type: 'inc' | 'dec') => {
+        if (type === 'inc') {
+            setQuantity(prev => prev + 1);
+        } else if (type === 'dec' && quantity > 1) {
+            setQuantity(prev => prev - 1);
+        }
+    };
+
     return (
-        <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
-            <div className="layout-container flex h-full grow flex-col">
-                {/* Header/Navigation */}
-                <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
-                    <div className="flex items-center gap-8">
-                        <div className="flex items-center gap-3 text-primary">
-                            <span className="material-symbols-outlined text-3xl font-bold">eco</span>
-                            <h2 className="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Jammi Pharmaceuticals</h2>
-                        </div>
-                        <nav className="hidden md:flex items-center gap-8">
-                            <a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
-                            <a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Ayurveda</a>
-                            <a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Our Story</a>
+        <div className="bg-white text-charcoal font-body min-h-screen pt-28">
+            <main className="max-w-7xl mx-auto px-6 py-12">
+                <section className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24 items-start">
+                    <div className="lg:col-span-12">
+                        <nav className="text-[10px] font-bold text-slate-400 mb-8 flex space-x-2 uppercase tracking-widest">
+                            <Link to="/" className="hover:text-brand-red">Home</Link>
+                            <span>/</span>
+                            <Link to="/shop" className="hover:text-brand-red">Wellness</Link>
+                            <span>/</span>
+                            <span className="text-brand-red font-bold underline decoration-brand-red/20 underline-offset-4 tracking-widest uppercase">Crush 'N Brush</span>
                         </nav>
                     </div>
-                    <div className="flex flex-1 justify-end gap-4 lg:gap-8 items-center">
-                        <label className="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
-                            <div className="flex w-full flex-1 items-stretch rounded-xl h-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50">
-                                <div className="text-slate-400 flex items-center justify-center pl-4">
-                                    <span className="material-symbols-outlined">search</span>
-                                </div>
-                                <input className="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 placeholder:text-slate-400 text-base font-normal px-2 text-slate-900 dark:text-white" placeholder="Search" value="" />
+
+                    {/* Left: Visual Display */}
+                    <div className="lg:col-span-7 flex flex-col gap-8">
+                        <div className="relative bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden p-12 group">
+                            <img
+                                alt="Crush 'N Brush Ayurvedic Toothpaste"
+                                className="w-full h-auto object-contain transition-transform duration-1000 group-hover:scale-110"
+                                src="/images/CrushNBrush_2.png"
+                            />
+                            <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-brand-red/10 shadow-sm">
+                                <span className="text-[10px] font-bold text-brand-red font-subheading tracking-widest uppercase">Oral Heritage</span>
                             </div>
-                        </label>
-                        <div className="flex gap-2">
-                            <button className="flex items-center justify-center rounded-xl h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary transition-all">
-                                <span className="material-symbols-outlined">shopping_cart</span>
-                            </button>
-                            <button className="flex items-center justify-center rounded-xl h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary transition-all">
-                                <span className="material-symbols-outlined">account_circle</span>
-                            </button>
                         </div>
                     </div>
-                </header>
 
-                <main className="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-10 py-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Product Gallery */}
-                        <div className="space-y-4">
-                            <div className="aspect-square rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 border dark:border-slate-700">
-                                <img alt="Jammi Crush N Brush Ayurvedic Pellets sustainable packaging" className="w-full h-full object-cover" data-alt="Eco-friendly packaging for Ayurvedic dental pellets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Hvl9I4wTJeb2KAMMGbycsJtSjIDDQuDb9bQG4keN1hUnk4hP2wsXeRbL_9-LGPhH0Bc2VhhTwJCH3HGZ0L0rOQk9bkQ12GZUlVTYfjpLMygiiiSg4oPdb1kktiOQd2SWfqpx8XC8RVJGfq8leeS6xNU5bxTXkPGTqcSTatYn7JdjWK6i_3PnajOE2L07-6Q0ek49ap2KGipuNV1Q6bjVzWgM5TCWYLLmmIf0sOxJCdmp1E8MTjVSVXpocOsSH-sTnBXsMt5HzRI" />
-                            </div>
-                            <div className="grid grid-cols-4 gap-4">
-                                <div className="aspect-square rounded-lg overflow-hidden border-2 border-primary bg-slate-100">
-                                    <div className="w-full h-full bg-slate-200 dark:bg-slate-800" data-alt="Close up of white dental pellets"></div>
+                    {/* Right: Formulation Details */}
+                    <div className="lg:col-span-5 flex flex-col gap-10">
+                        <div>
+                            <h1 className="font-heading text-6xl text-brand-red mb-4 uppercase tracking-tighter">Crush 'N Brush</h1>
+                            <p className="font-subheading text-lg text-charcoal/60 italic mb-8 italic">Premium Ayurvedic Toothpaste with Clove & Neem</p>
+
+                            <div className="flex items-center gap-6 py-8 border-y border-slate-100">
+                                <div className="flex flex-col">
+                                    <span className="text-4xl font-bold text-brand-red tracking-tight">₹150</span>
+                                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">100g Complete Oral Defense</span>
                                 </div>
-                                <div className="aspect-square rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-100">
-                                    <div className="w-full h-full bg-slate-200 dark:bg-slate-800" data-alt="Herbal ingredients used in product"></div>
-                                </div>
-                                <div className="aspect-square rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-100">
-                                    <div className="w-full h-full bg-slate-200 dark:bg-slate-800" data-alt="Model using the dental pellets"></div>
-                                </div>
-                                <div className="aspect-square rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-100">
-                                    <div className="w-full h-full bg-slate-200 dark:bg-slate-800" data-alt="Sustainable travel tin packaging details"></div>
+                                <div className="h-12 w-px bg-slate-200"></div>
+                                <div className="flex flex-col gap-1">
+                                    <div className="flex text-warm-gold">
+                                        {[1, 2, 3, 4, 5].map(s => <span key={s} className="material-symbols-outlined text-sm">star</span>)}
+                                    </div>
+                                    <span className="text-[10px] font-bold text-charcoal/40 uppercase tracking-widest">Dentist Approved</span>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Product Details */}
-                        <div className="flex flex-col">
-                            <div className="mb-2">
-                                <span className="text-primary text-sm font-bold tracking-widest uppercase">Oral Care / Wellness</span>
-                            </div>
-                            <h1 className="text-4xl lg:text-5xl font-black text-slate-900 dark:text-slate-100 mb-4 leading-tight">Crush N' Brush Ayurvedic Pellets</h1>
-                            <p className="text-lg text-slate-600 dark:text-slate-400 mb-6 font-medium leading-relaxed">Sustainable Oral Care | Ancient Wisdom meets Modern Convenience. Experience a plastic-free smile crafted from centuries-old Ayurvedic botanicals.</p>
+                        <div className="space-y-6">
+                            <p className="text-charcoal/70 leading-relaxed font-body">Experience the power of traditional oral care. Crush 'N Brush combines the antibacterial properties of Neem with the pain-relieving essence of Clove to ensure ultimate gum health and sparkling white teeth without any fluoride or harsh chemicals.</p>
 
-                            <div className="flex items-center gap-4 mb-8">
-                                <div className="flex items-center gap-1 text-primary">
-                                    <span className="material-symbols-outlined font-variation-settings-[&#39;FILL&#39;_1]">star</span>
-                                    <span className="material-symbols-outlined font-variation-settings-[&#39;FILL&#39;_1]">star</span>
-                                    <span className="material-symbols-outlined font-variation-settings-[&#39;FILL&#39;_1]">star</span>
-                                    <span className="material-symbols-outlined font-variation-settings-[&#39;FILL&#39;_1]">star</span>
-                                    <span className="material-symbols-outlined">star</span>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <div className="flex items-center border border-slate-200 rounded-lg overflow-hidden h-14">
+                                    <button onClick={() => handleQuantityChange('dec')} className="px-6 hover:bg-slate-50 transition border-r border-slate-100">-</button>
+                                    <span className="px-4 font-bold min-w-[3rem] text-center">{quantity}</span>
+                                    <button onClick={() => handleQuantityChange('inc')} className="px-6 hover:bg-slate-50 transition border-l border-slate-100">+</button>
                                 </div>
-                                <span className="text-slate-500 dark:text-slate-400 font-medium">4.9 (128 reviews)</span>
-                            </div>
-
-                            <div className="flex gap-3 mb-8 flex-wrap">
-                                <div className="flex h-10 items-center justify-center gap-x-2 rounded-xl bg-primary/10 px-4">
-                                    <span className="material-symbols-outlined text-primary text-sm">shield</span>
-                                    <p className="text-primary text-sm font-bold">Enamel Protection</p>
-                                </div>
-                                <div className="flex h-10 items-center justify-center gap-x-2 rounded-xl bg-primary/10 px-4">
-                                    <span className="material-symbols-outlined text-primary text-sm">air</span>
-                                    <p className="text-primary text-sm font-bold">Fresh Breath</p>
-                                </div>
-                                <div className="flex h-10 items-center justify-center gap-x-2 rounded-xl bg-primary/10 px-4">
-                                    <span className="material-symbols-outlined text-primary text-sm">luggage</span>
-                                    <p className="text-primary text-sm font-bold">Travel-friendly</p>
-                                </div>
-                            </div>
-
-                            <div className="mb-10 p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 shadow-sm">
-                                <div className="flex items-end justify-between mb-6">
-                                    <div>
-                                        <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-1">Price</p>
-                                        <p className="text-3xl font-black text-slate-900 dark:text-slate-100 leading-none">$14.99</p>
-                                    </div>
-                                    <div className="text-right">
-                                        <p className="text-green-600 dark:text-green-400 text-xs font-bold mb-1">In Stock</p>
-                                        <p className="text-slate-500 text-xs">Ships in compostable mailers</p>
-                                    </div>
-                                </div>
-                                <button className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary/20">
-                                    <span className="material-symbols-outlined">shopping_bag</span>
-                                    Add to Cart
+                                <button className="flex-1 bg-brand-red text-white font-subheading font-bold text-xs uppercase tracking-[0.3em] h-14 hover:shadow-2xl hover:shadow-brand-red/40 transition-all active:scale-95">
+                                    Acquire Smile
                                 </button>
                             </div>
+                        </div>
 
-                            {/* 3-Step Guide */}
-                            <div className="border-t border-slate-200 dark:border-slate-800 pt-8">
-                                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-6">How to Use: The 3-Step Ritual</h3>
-                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                                    <div className="flex flex-col items-center text-center p-4 rounded-xl bg-slate-100/50 dark:bg-slate-800/30">
-                                        <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold mb-3">1</div>
-                                        <p className="font-bold text-sm mb-1 uppercase">Crush</p>
-                                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Place one pellet in mouth and crush lightly with your molars.</p>
-                                    </div>
-                                    <div className="flex flex-col items-center text-center p-4 rounded-xl bg-slate-100/50 dark:bg-slate-800/30">
-                                        <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold mb-3">2</div>
-                                        <p className="font-bold text-sm mb-1 uppercase">Brush</p>
-                                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Wet your toothbrush and brush normally. Watch it foam naturally.</p>
-                                    </div>
-                                    <div className="flex flex-col items-center text-center p-4 rounded-xl bg-slate-100/50 dark:bg-slate-800/30">
-                                        <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold mb-3">3</div>
-                                        <p className="font-bold text-sm mb-1 uppercase">Rinse</p>
-                                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Rinse and enjoy that long-lasting Ayurvedic freshness.</p>
-                                    </div>
+                        <div className="grid grid-cols-2 gap-4">
+                            {[
+                                { icon: 'shield', text: 'Gum Protection' },
+                                { icon: 'auto_fix_high', text: 'Natural Whitening' },
+                                { icon: 'eco', text: 'Fluoride-Free' },
+                                { icon: 'verified', text: 'Herbal Potency' }
+                            ].map((feat, i) => (
+                                <div key={i} className="flex items-center gap-4 p-4 border border-slate-100 rounded-xl hover:border-brand-red/20 transition-colors">
+                                    <span className="material-symbols-outlined text-brand-red text-lg">{feat.icon}</span>
+                                    <span className="text-[10px] font-bold text-charcoal/60 uppercase racking-widest">{feat.text}</span>
                                 </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
+                </section>
 
-                    {/* Product Reviews & Stats Section */}
-                    <div className="mt-20 pt-16 border-t border-slate-200 dark:border-slate-800">
-                        <div className="flex flex-wrap gap-x-16 gap-y-10">
-                            <div className="flex flex-col gap-4 min-w-[200px]">
-                                <h3 className="text-2xl font-bold dark:text-white">Customer Love</h3>
-                                <div className="flex items-baseline gap-2">
-                                    <p className="text-6xl font-black text-slate-900 dark:text-slate-100 tracking-tight">4.9</p>
-                                    <p className="text-slate-400 font-medium">/ 5</p>
+                {/* Legacy Experience Section */}
+                <section className="bg-slate-50/50 rounded-3xl p-12 md:p-24 mb-24 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 className="font-heading text-4xl text-brand-red mb-6 uppercase tracking-tight">The Heritage of the Neem Stick</h2>
+                            <p className="text-charcoal/70 leading-relaxed font-body mb-8 italic">"Ancient wisdom distilled into a modern squeeze. We have captured the essence of the 'Datan' (Neem stick) and combined it with the desensitizing power of Lavanga (Clove) to provide a professional oral clean that honors tradition."</p>
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-warm-gold"></div>
+                                    <span className="text-xs font-bold text-brand-red uppercase tracking-widest">Active Clove Oil Extract</span>
                                 </div>
-                                <div className="flex gap-1 text-primary">
-                                    <span className="material-symbols-outlined font-variation-settings-[&#39;FILL&#39;_1] text-2xl">star</span>
-                                    <span className="material-symbols-outlined font-variation-settings-[&#39;FILL&#39;_1] text-2xl">star</span>
-                                    <span className="material-symbols-outlined font-variation-settings-[&#39;FILL&#39;_1] text-2xl">star</span>
-                                    <span className="material-symbols-outlined font-variation-settings-[&#39;FILL&#39;_1] text-2xl">star</span>
-                                    <span className="material-symbols-outlined font-variation-settings-[&#39;FILL&#39;_1] text-2xl">star</span>
+                                <div className="flex items-center gap-4">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-warm-gold"></div>
+                                    <span className="text-xs font-bold text-brand-red uppercase tracking-widest">Antibacterial Neem Infusion</span>
                                 </div>
-                                <p className="text-slate-500 font-medium">Based on 128 reviews</p>
                             </div>
-                            <div className="grid min-w-[300px] max-w-[500px] flex-1 grid-cols-[30px_1fr_50px] items-center gap-y-4">
-                                <p className="text-slate-600 dark:text-slate-400 text-sm font-bold">5</p>
-                                <div className="flex h-2.5 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
-                                    <div className="rounded-full bg-primary" style={{ width: "90%" }}></div>
-                                </div>
-                                <p className="text-slate-500 text-sm font-bold text-right">90%</p>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm font-bold">4</p>
-                                <div className="flex h-2.5 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
-                                    <div className="rounded-full bg-primary" style={{ width: "7%" }}></div>
-                                </div>
-                                <p className="text-slate-500 text-sm font-bold text-right">7%</p>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm font-bold">3</p>
-                                <div className="flex h-2.5 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
-                                    <div className="rounded-full bg-primary" style={{ width: "2%" }}></div>
-                                </div>
-                                <p className="text-slate-500 text-sm font-bold text-right">2%</p>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm font-bold">2</p>
-                                <div className="flex h-2.5 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
-                                    <div className="rounded-full bg-primary" style={{ width: "0%" }}></div>
-                                </div>
-                                <p className="text-slate-500 text-sm font-bold text-right">0%</p>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm font-bold">1</p>
-                                <div className="flex h-2.5 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
-                                    <div className="rounded-full bg-primary" style={{ width: "1%" }}></div>
-                                </div>
-                                <p className="text-slate-500 text-sm font-bold text-right">1%</p>
+                        </div>
+                        <div className="aspect-video bg-white rounded-2xl shadow-xl flex items-center justify-center border border-slate-100">
+                            <div className="text-center group">
+                                <span className="block text-5xl font-heading font-bold text-brand-red group-hover:scale-110 transition-transform">97%</span>
+                                <span className="text-[10px] font-bold text-charcoal/40 uppercase tracking-widest">Reported Fresher Breath</span>
                             </div>
                         </div>
                     </div>
-                </main>
+                </section>
 
-                {/* Footer */}
-                <footer className="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark py-12">
-                    <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-4 gap-12">
-                        <div className="col-span-1 md:col-span-1">
-                            <div className="flex items-center gap-2 text-primary mb-6">
-                                <span className="material-symbols-outlined text-2xl font-bold">eco</span>
-                                <span className="text-xl font-bold text-slate-900 dark:text-slate-100">Jammi</span>
-                            </div>
-                            <p className="text-slate-500 text-sm leading-relaxed mb-6">Merging traditional Ayurvedic healing with modern sustainable practices since 1901.</p>
-                            <div className="flex gap-4">
-                                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500"><span className="material-symbols-outlined text-sm">public</span></div>
-                                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500"><span className="material-symbols-outlined text-sm">mail</span></div>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-6">Products</h4>
-                            <ul className="space-y-4 text-slate-500 text-sm">
-                                <li><a className="hover:text-primary transition-colors" href="#">Oral Care</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">Digestive Wellness</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">Immunity Boosters</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-6">Company</h4>
-                            <ul className="space-y-4 text-slate-500 text-sm">
-                                <li><a className="hover:text-primary transition-colors" href="#">Our Story</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">Sustainability</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">Contact Us</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">Wholesale</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-6">Newsletter</h4>
-                            <p className="text-slate-500 text-sm mb-4">Join our community for wellness tips and eco-friendly news.</p>
-                            <div className="flex gap-2">
-                                <input className="form-input bg-slate-100 dark:bg-slate-800 border-none rounded-lg flex-1 text-sm text-slate-900 dark:text-slate-100" placeholder="Email" type="email" />
-                                <button className="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors"><span className="material-symbols-outlined">arrow_forward</span></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-slate-400 text-xs">© 2024 Jammi Pharmaceuticals. All rights reserved.</p>
-                        <div className="flex gap-6 text-slate-400 text-xs font-medium">
-                            <a href="#" className="hover:text-slate-600 dark:hover:text-slate-200">Privacy Policy</a>
-                            <a href="#" className="hover:text-slate-600 dark:hover:text-slate-200">Terms of Service</a>
-                            <a href="#" className="hover:text-slate-600 dark:hover:text-slate-200">Shipping Policy</a>
-                        </div>
-                    </div>
-                </footer>
-            </div>
+                <ReviewSystem productId="crush-n-brush" />
+                <SmartRecommendations currentId="crush-n-brush" />
+            </main>
         </div>
     );
 };

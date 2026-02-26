@@ -1,17 +1,110 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #d58a30;
-  --color-saffron: #E67E22;
-  --color-forest: #1B4332;
-  --color-cream: #FBF7F0;
-  --color-cream-dark: #F0E8DC;
-  --color-background-light: #FAF9F6;
-  --color-background-dark: #0f241a;
-  
-  --font-sans: "Inter", "DM Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", serif;
-  --font-dm: "DM Sans", sans-serif;
+  --color-brand-red: #7B1C2E;
+  --color-warm-gold: #C9922A;
+  --color-saffron: #E8821A;
+  --color-inner-lotus: #C0392B;
+  --color-cream: #FFFFFF;
+  --color-background-light: #FFFFFF;
+  --color-charcoal: #4A4A4A;
+  --color-dark-burgundy: #3D0C1A;
+  --color-deep-black: #1A0A10;
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-subheading: "Cinzel", serif;
+  --font-body: "Jost", sans-serif;
+
+  --animate-shimmer: shimmer 3s infinite linear;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+  --animate-pulse-gold: pulseGold 2s infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulseGold {
+
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(201, 146, 42, 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 20px 5px rgba(201, 146, 42, 0.2);
+    }
+  }
+}
+
+/* Custom Utilities from requested HTML */
+@utility shimmer-text {
+  background: linear-gradient(90deg, #C9922A 0%, #FFFFFF 50%, #C9922A 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s infinite linear;
+}
+
+@utility shimmer-btn {
+  background: linear-gradient(120deg, #7B1C2E 0%, #a3283d 45%, #FFFFFF 50%, #a3283d 55%, #7B1C2E 100%);
+  background-size: 250% 100%;
+  transition: background-position 0.5s ease;
+
+  &:hover {
+    background-position: 100% 0;
+  }
+}
+
+@utility tilt-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+
+  &:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg) scale(1.02);
+    box-shadow: 0 15px 35px rgba(201, 146, 42, 0.15);
+  }
 }
 
 @layer utilities {
@@ -19,15 +112,18 @@
     background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2NUbxbD7Xx8BIQFYdrk6FXiOuWjDPYBuKswv9Fyr9q18CDhV6BA9B5K9y3j8VSozm9ynAL5kQDR6Z8WiUnwP1II6RB-GoHqNzh-ukZs1NyneMYdVXx-RoJIY18qrhNDATmPqPy6UEmHwAiXXhPj61qWCotlbTnQ_1TzqAYeDu31dlCEHbqss_wNz4ZC1izUqR7yCj1loF_82u1uDfoli7ayVQnxHrgd60sDBxdwD47vThdJ5QW8z0llOCoQdLKznsaQpdAl6JjgY");
     background-blend-mode: overlay;
   }
+
   .glass-header {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(240, 232, 220, 0.5);
+    border-bottom: 1px solid rgba(123, 28, 46, 0.1);
   }
+
   .paper-grain {
     position: relative;
   }
+
   .paper-grain::before {
     content: "";
     position: absolute;
@@ -43,8 +139,13 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .material-symbols-outlined {
@@ -52,5 +153,7 @@
 }
 
 body {
-  @apply bg-background-light font-sans text-[#1a150f];
+  background-color: var(--color-background-light);
+  font-family: var(--font-body);
+  color: #1a150f;
 }

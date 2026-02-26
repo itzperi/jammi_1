@@ -14,43 +14,112 @@ const Home: React.FC = () => {
     <div className="bg-background-light pt-[5rem]">
 
       {/* Section 1: Hero */}
-      <section className="relative min-h-[90vh] flex items-center bg-forest overflow-hidden mt-1">
-        {/* Background Image - woman in yoga/stretch pose, silhouetted */}
-        <div
-          className="absolute inset-0 bg-cover bg-center md:bg-right opacity-60 mix-blend-overlay"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1920")' }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-forest via-forest/80 to-transparent"></div>
+      {/* Section 1: Elite Heritage Hero */}
+      <section className="relative min-h-[100vh] flex items-center overflow-hidden bg-[#fafafa]">
+        {/* Layered Background Infrastructure */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(123,28,46,0.05),transparent)]"></div>
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-red/[0.02] -skew-x-12 translate-x-1/2"></div>
+          <div className="absolute inset-0 grain-texture opacity-[0.12] pointer-events-none"></div>
+        </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full py-20 flex flex-col justify-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 border border-saffron/50 rounded-full px-4 py-1.5 mb-8 w-max bg-forest/30 backdrop-blur-sm">
-            <span className="material-symbols-outlined text-saffron text-sm">star</span>
-            <span className="text-white text-[10px] sm:text-xs font-bold tracking-widest uppercase mt-0.5">128 Years of Authenticity</span>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-20 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+          {/* Elite Textual Content */}
+          <div className="lg:col-span-7 space-y-12">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-4 bg-white/80 backdrop-blur-md border border-brand-red/10 px-6 py-2 rounded-full shadow-sm animate-fade-in">
+                <span className="w-1.5 h-1.5 rounded-full bg-warm-gold animate-ping"></span>
+                <span className="text-brand-red font-subheading text-[10px] font-bold tracking-[0.4em] uppercase mt-0.5">India's Clinical Gold Standard</span>
+              </div>
+
+              <h1 className="font-heading leading-[0.85] animate-reveal">
+                <span className="block text-brand-red text-6xl md:text-8xl lg:text-[7.5rem] font-bold tracking-tighter mb-2">ROYAL</span>
+                <span className="flex items-center gap-6">
+                  <span className="text-warm-gold italic text-7xl md:text-9xl lg:text-[9rem] font-heading leading-none">healing</span>
+                  <span className="h-[2px] flex-grow bg-brand-red/10 hidden md:block"></span>
+                </span>
+                <span className="block text-brand-red text-6xl md:text-8xl lg:text-[7.5rem] font-bold tracking-tighter mt-2">DEFINED.</span>
+              </h1>
+            </div>
+
+            <div className="max-w-xl animate-fade-in-up [animation-delay:400ms]">
+              <p className="text-charcoal/70 text-lg md:text-xl font-body leading-relaxed border-l-4 border-warm-gold pl-8">
+                Since 1897, we have served the lineage of wellness. Bridging royal Ayurvedic secrets with deep clinical research to restore your biology's original design.
+              </p>
+            </div>
+
+            {/* Conversion Duo */}
+            <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up [animation-delay:600ms]">
+              <Link to="/shop" className="group relative bg-brand-red text-white font-subheading font-bold px-12 py-6 rounded-sm overflow-hidden transition-all duration-700 hover:shadow-[0_20px_50px_rgba(123,28,46,0.3)] hover:-translate-y-1 text-center">
+                <span className="relative z-10 tracking-[0.3em] text-xs uppercase">Enter The Reserve</span>
+                <div className="absolute inset-0 bg-dark-burgundy -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out"></div>
+              </Link>
+              <Link to="/heritage" className="group border border-brand-red/20 text-brand-red font-subheading font-bold px-12 py-6 rounded-sm transition-all duration-500 hover:bg-white hover:border-brand-red hover:shadow-xl text-center">
+                <span className="tracking-[0.3em] text-xs uppercase">The Genesis Case</span>
+              </Link>
+            </div>
+
+            {/* Elite Trust Strip */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-10 pt-12 border-t border-brand-red/10 border-dashed animate-fade-in [animation-delay:800ms]">
+              {[
+                { value: "128", label: "Years of Legacy", icon: "history_edu" },
+                { value: "50k+", label: "Lives Restored", icon: "groups" },
+                { value: "100%", label: "Clinical Purity", icon: "verified" }
+              ].map((stat, i) => (
+                <div key={i} className="flex flex-col gap-1 items-start">
+                  <span className="material-symbols-outlined text-warm-gold text-2xl mb-2">{stat.icon}</span>
+                  <span className="text-2xl font-heading font-bold text-brand-red">{stat.value}</span>
+                  <span className="text-[9px] font-bold text-charcoal/40 uppercase tracking-widest">{stat.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Headline */}
-          <h1 className="font-serif leading-none mb-6">
-            <span className="block text-white font-bold text-5xl sm:text-7xl md:text-8xl uppercase tracking-tight">INDIA'S</span>
-            <span className="block text-saffron italic text-6xl sm:text-8xl md:text-9xl pl-2 tracking-tight -mt-4 sm:-mt-6">Healthcare</span>
-            <span className="block text-white font-bold text-5xl sm:text-7xl md:text-8xl uppercase tracking-tight -mt-2 sm:-mt-4 relative z-10">RENAISSANCE.</span>
-          </h1>
+          {/* Visual Excellence: Hero Image with Floating Elements */}
+          <div className="lg:col-span-5 relative hidden lg:block perspective-2000">
+            <div className="relative z-10 w-full aspect-[4/5] bg-white shadow-[0_60px_120px_-20px_rgba(123,28,46,0.15)] rounded-2xl overflow-hidden group transition-transform duration-1000 [transform-style:preserve-3d] hover:rotate-y-6">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-red/[0.02] to-brand-red/[0.08] pointer-events-none"></div>
+              <div className="absolute inset-0 p-12 flex items-center justify-center">
+                <img
+                  src="/images/TriphalaChurna_2.png"
+                  alt="Jammi Masterpiece Exhibit"
+                  className="w-[85%] h-auto object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-3"
+                />
+              </div>
 
-          {/* Subtext */}
-          <p className="text-white/80 max-w-xl text-lg sm:text-xl font-medium leading-relaxed mb-10">
-            We are not "Alternative Medicine." We are India's primary healthcare solution since 1897.
-          </p>
+              {/* Information Overlay */}
+              <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end">
+                <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl border border-brand-red/10 shadow-xl translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
+                  <h4 className="font-heading text-brand-red text-lg font-bold mb-1">Triphala Churna</h4>
+                  <p className="text-[10px] font-bold text-charcoal/60 uppercase tracking-widest">Masterpiece Detoxifier</p>
+                </div>
+                <div className="w-24 h-24 rounded-full border border-warm-gold/30 border-dashed animate-spin-slow flex items-center justify-center p-2 opacity-30 group-hover:opacity-100 transition-opacity">
+                  <div className="w-full h-full rounded-full border border-warm-gold flex items-center justify-center text-warm-gold text-[8px] font-bold uppercase tracking-tighter text-center italic">Authentic Ayurveda</div>
+                </div>
+              </div>
+            </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <Link to="/shop" className="bg-saffron text-white font-bold px-8 py-4 flex justify-between items-center rounded-sm hover:-translate-y-1 hover:shadow-xl transition-all w-full sm:w-auto min-w-[200px] border border-saffron text-sm tracking-widest leading-none">
-              THE PHARMACY
-              <span className="material-symbols-outlined ml-4">arrow_forward</span>
-            </Link>
-            <Link to="/federation" className="bg-transparent border-2 border-white text-white font-bold px-8 py-4 flex justify-center items-center rounded-sm hover:bg-white/10 transition-all w-full sm:w-auto text-sm tracking-widest leading-none">
-              JOIN THE ARMY
-            </Link>
+            {/* Floating Trust Fragments */}
+            <div className="absolute -top-12 -right-12 bg-white/95 backdrop-blur-md p-6 shadow-2xl rounded-2xl border border-brand-red/5 z-20 animate-float">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red">
+                  <span className="material-symbols-outlined">stars</span>
+                </div>
+                <div>
+                  <div className="text-xl font-bold text-brand-red">4.9/5</div>
+                  <div className="text-[9px] font-bold text-charcoal/40 uppercase tracking-widest">Global Rating</div>
+                </div>
+              </div>
+            </div>
           </div>
+
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30 animate-pulse">
+          <span className="text-[9px] font-bold text-charcoal uppercase tracking-[0.4em]">Descend</span>
+          <div className="w-px h-12 bg-gradient-to-b from-brand-red to-transparent"></div>
         </div>
       </section>
 
@@ -232,16 +301,19 @@ const Home: React.FC = () => {
 
             <ul className="space-y-6 mb-12">
               {[
-                'EXCLUSIVE WHOLESALE PRICING (25% MARGIN)',
-                'DIRECT PATIENT REFERRAL NETWORK',
-                'HERITAGE BRAND SUPPORT SINCE 1897',
-                'CLINICAL EDUCATION & MENTORSHIP'
+                { title: 'BRING THE AYURVEDA BACK', desc: 'Regain the lost territory of Indian Healthcare through clinical heritage.' },
+                { title: 'STOP THE QUACKERY', desc: 'Move away from commercial placeholders to research-backed formulations.' },
+                { title: 'DIRECT HERITAGE ACCESS', desc: 'Plug into 128 years of clinical records and practitioner wisdom.' },
+                { title: 'ECONOMIC SOVEREIGNTY', desc: 'Higher margins and direct referral networks for true practitioners.' }
               ].map((item, idx) => (
-                <li key={idx} className="flex items-center gap-4 text-white font-bold text-xs sm:text-sm tracking-wide">
+                <li key={idx} className="flex gap-4">
                   <span className="flex-shrink-0 w-8 h-8 rounded-full bg-saffron/20 border border-saffron flex items-center justify-center text-saffron">
                     <span className="material-symbols-outlined text-sm">check</span>
                   </span>
-                  {item}
+                  <div>
+                    <h4 className="text-white font-bold text-sm tracking-wide mb-1">{item.title}</h4>
+                    <p className="text-white/60 text-xs leading-relaxed">{item.desc}</p>
+                  </div>
                 </li>
               ))}
             </ul>
