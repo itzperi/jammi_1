@@ -20,7 +20,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Ayurvedic Detoxifier & Rejuvenator',
     shortDesc: 'Classic Ayurvedic powder for digestion, systemic cleansing and vitality. 100 gms.',
     price: 150,
-    image: 'https://cdn.discordapp.com/attachments/1314959419106037804/1342603417727307849/image.png?ex=67ba372d&is=67b8e5ad&hm=188c6c5188da9b6ba038161adddfd266dbceb5df03f7ca80c05517bad54a8de4&',
+    image: '/images/TriphalaChurna_2.png',
     category: 'Wellness',
     features: [
       { title: 'Gentle Detox', desc: 'Promotes regular bowel movements.', icon: 'eco' },
@@ -47,7 +47,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Immunity Booster',
     shortDesc: 'A delicious immunity-boosting syrup formulated specifically for children.',
     price: 250,
-    image: 'https://cdn.discordapp.com/attachments/1314959419106037804/1342603418293706853/image.png?ex=67ba372d&is=67b8e5ad&hm=a09848f219d3fbc19c8fdd30733d98bd267c7e3f84f04c632890532570d8a59f&',
+    image: '/images/Yummunity Bottle.png',
     category: 'Wellness',
     features: [
       { title: 'Kid-Friendly Taste', desc: 'Formulated to be delicious and easy to consume.', icon: 'child_care' },
@@ -72,7 +72,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Constipation Relief',
     shortDesc: 'Smooth movement and relief from constipation in a convenient capsule.',
     price: 220,
-    image: 'https://cdn.discordapp.com/attachments/1314959419106037804/1342604245787644026/image.png?ex=67ba37f3&is=67b8e673&hm=9b6057a6e1d5204481358d3d9daeb1f2ea8babb04e578f77d24d27e7f626db4f&',
+    image: '/images/Tripcaps_1.png',
     category: 'Wellness',
     features: [
       { title: 'Quick Relief', desc: 'Effective overnight relief from constipation.', icon: 'fast_forward' },
@@ -125,7 +125,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Supports Male Vitality',
     shortDesc: 'Ayurvedic formulation designed to address the modern Male Infertility Crisis and sexual insufficiencies.',
     price: 750,
-    image: 'https://cdn.discordapp.com/attachments/1314959419106037804/1342621021279522816/image.png?ex=67ba4792&is=67b8f612&hm=1bfaf455af027b587a3ab55b7bebc3c051515bcafcae52d3a018bcff618991ef&',
+    image: '/images/WidariForte_2.png',
     category: 'Therapeutics',
     features: [
       { title: 'Enhances Vitality', desc: 'Natural energy boosters that work at the cellular level.', icon: 'bolt' },
@@ -151,7 +151,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Regain Your Natural Rhythm',
     shortDesc: 'A potent Ayurvedic blend formulated to boost thyroid function and balance metabolism naturally.',
     price: 450,
-    image: 'https://cdn.discordapp.com/attachments/1314959419106037804/1342621455519875153/image.png?ex=67ba47fa&is=67b8f67a&hm=bf1a6b0c2a7144eef7ee55dbb320d31c4f52e5055b8efcc385ebcebf348003b1&',
+    image: '/images/Thyro_1.png',
     category: 'Wellness',
     features: [
       { title: 'Balances Metabolism', desc: 'Optimizes metabolic rate to help manage weight.', icon: 'bolt' },
@@ -174,7 +174,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Uterine Tonic for Complete Women\'s Wellness',
     shortDesc: 'Ayurvedic formulation designed to support female reproductive health and balance hormones.',
     price: 280,
-    image: 'https://cdn.discordapp.com/attachments/1314959419106037804/1342621456157675662/image.png?ex=67ba47fa&is=67b8f67a&hm=301b5cb1ceeb8ebc761339af8b72eebad522384aae6617a220261ca205b38edb&',
+    image: '/images/Suventris_1.png',
     category: 'Wellness',
     features: [
       { title: 'Regulates Cycles', desc: 'Promotes hormonal balance to ensure regular menstrual cycles.', icon: 'event_repeat' },
@@ -200,7 +200,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Relief from Edema',
     shortDesc: 'Relief from Edema & Promotes Healthy Weight Loss',
     price: 320,
-    image: 'https://cdn.discordapp.com/attachments/1314959419106037804/1342621456677503046/image.png?ex=67ba47fa&is=67b8f67a&hm=2140801bfbd6dc7da67ce6826c710d0571e21703dc26c3614cd3b7d15fe4acdf&',
+    image: '/images/Redema_2.png',
     category: 'Wellness',
     features: [
       { title: 'Reduces Water Retention', desc: 'Helps eliminate excess fluid buildup.', icon: 'opacity' },
@@ -224,7 +224,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Advanced Anti-Pyretic',
     shortDesc: 'Advanced Ayurvedic formulation providing fast relief from high temperature and body aches.',
     price: 150,
-    image: 'https://cdn.discordapp.com/attachments/1314959419106037804/1342621457105457284/image.png?ex=67ba47fb&is=67b8f67b&hm=89a71060c5ea2b19280ab425642c3d5dd850fe6009de36c2ef64d733a1e9447d&',
+    image: '/images/PyrilDS_2.png',
     category: 'Wellness',
     features: [
       { title: 'Fast Relief', desc: 'Quickly reduces temperature.', icon: 'local_fire_department' },
@@ -248,7 +248,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Deep Penetrating Ayurvedic Joint & Muscle Pain Relief',
     shortDesc: 'Formulated to address various types of musculoskeletal discomfort using ancient Taila Paka Vidhi.',
     price: 350,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDFoJgEqrA362zH-WpQn2E6Lh24kZ5v93fMOf5W04Yh8J48n7Q6qI37mY2rQjS36R8r_S4Z7k8M2C6M71xNqA57c61l7O0s50Z9R45D3sWvM73A25o94rL5d-4n7J-H9I3Q19F0L0Q0E1i8P1v0p4aU4L4A6JmH8F6Jm6Y5nKx5w_02kU1-A-Z60M160S-k7Q5Z9-0',
+    image: '/images/OrthoRaksha_2.png',
     category: 'Wellness',
     features: [
       { title: 'Fast Relief', desc: '10x Faster Absorption.', icon: 'local_fire_department' },
@@ -272,7 +272,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Ultimate Neuromuscular Rejuvenation',
     shortDesc: 'A profound, nourishing blend of over 40 herbs designed to deeply restore neuromuscular vitalty.',
     price: 350,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAMsZ5lJb_N5lO0m119mO99S0pZ62t_tO1nZ6p9b4R846r4246p_4n72kZ6PqS0k6tH8pA-p0Q5Q0pA_xX1Kzj1-2wNnK2Y_0P9_T4m65-v6R_7TqR3t2Y9o5_8p_41p5B6qE2t0V94O148Z9g0S5lK_8K9H1R5b4V-u8W82K-1sP7l3_Y8f-M_827pT6Z0-N',
+    image: '/images/MahanarayanaTaila_1.png',
     category: 'Wellness',
     features: [
       { title: 'Neuromuscular', desc: 'Rehabilitates nerve function.', icon: 'psychology' },
@@ -297,7 +297,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Natural Nausea Relief',
     shortDesc: 'Fast acting Ayurvedic relief from nausea, vomiting, and acid indigestion without drowsiness.',
     price: 120,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDFoJgEqrA362zH-WpQn2E6Lh24kZ5v93fMOf5W04Yh8J48n7Q6qI37mY2rQjS36R8r_S4Z7k8M2C6M71xNqA57c61l7O0s50Z9R45D3sWvM73A25o94rL5d-4n7J-H9I3Q19F0L0Q0E1i8P1v0p4aU4L4A6JmH8F6Jm6Y5nKx5w_02kU1-A-Z60M160S-k7Q5Z9-0',
+    image: '/images/Nilomit_2..png',
     category: 'Wellness',
     features: [
       { title: 'Non-sedative', desc: 'Motion sickness relief.', icon: 'sailing' },
@@ -322,7 +322,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Heritage-Rich Ayurvedic Formula for Golden Glow',
     shortDesc: 'Experience the golden glow of Ayurveda. Daily Dew is a light, deeply nourishing moisturizer infused with Kashmiri Saffron and Kumkumadi Oil, designed to provide 24-hour hydration without any greasy residue.',
     price: 1499,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAB9ISZAC15grh-S6r6fbeHc04chO9l442GaakYej_WOUphwXuuWiB5rPZ6K1cZivwuRi8dpqDVRx4cNj_KgeHtSRIYNBpoZfu1PgUF0J9Zv6sk5aLa1eIgRjzuJtqLwu0GRwlaMgg7Y_-a34lDZiRvpUwUt09gJXXhc82tiCRqoZJoIOxkriPZpGLPTnX82WP4Vp0gvdw5vQTMwPl2nBB12KVqPXDL45aPv9lhnv_KU1uFYUiCETDiogv4PW_vuJzfQIrM8VU1VKg',
+    image: '/images/Daily Dew.png',
     category: 'Skin & Hair Care',
     features: [
       { title: 'Deep Hydration', desc: 'Moisturizes skin', icon: 'water_drop' },
@@ -348,7 +348,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Ayurvedic Blood Sugar Regulator',
     shortDesc: 'Regulates blood sugar and boosts metabolism. 100g.',
     price: 350,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDFqT9dMXXW5hL1vjB5rQjV9R8Hk1eS8JqP4QpEaMItTqZfR_mZ4LItSik51A5r5g81g8N2IinXyVq7S16Q2gE4LIfP5kG9PzvFq8A04wzU4L4A2OWeM29_gD9R1L7BvM8X8P6D8T1MvW4M6H4K8JqGqZ6qZ6qZ6qZ6qZ6qZ6qZ6qZ6qZ6qZ',
+    image: '/images/MadhumehariChurna_2.png',
     category: 'Wellness',
     features: [
       { title: 'Regulates Sugar', desc: 'Balances blood glucose naturally.', icon: 'monitor_weight' },
@@ -373,7 +373,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Advanced Bone Healing',
     shortDesc: 'Natural formula for accelerating bone healing and improving bone mineral density.',
     price: 450,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDFqT9dMXXW5hL1vjB5rQjV9R8Hk1eS8JqP4QpEaMItTqZfR_mZ4LItSik51A5r5g81g8N2IinXyVq7S16Q2gE4LIfP5kG9PzvFq8A04wzU4L4A2OWeM29_gD9R1L7BvM8X8P6D8T1MvW4M6H4K8JqGqZ6qZ6qZ6qZ6qZ6qZ6qZ6qZ6qZ6qZ',
+    image: '/images/Laksha_1.png',
     category: 'Therapeutics',
     features: [
       { title: 'Fracture Healing', desc: 'Accelerates bone recovery.', icon: 'healing' },
@@ -397,7 +397,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'The Holistic Liver Stimulant & Appetizer',
     shortDesc: 'A 100% Ayurvedic Liver Tonic that protects from toxins and enhances liver function.',
     price: 425,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAHu_bpXGgirPO-bR1JIsn96VSOUXtJ_j3K_bSw1NdKfh62v-UF-A3A-oaWivjVq1EOyOrbuMCSPgFSnTZ8N83LhW7IkNbkbJcNeTWps3h6abo7YQht7Tvrd5jmTrm0S3dXpLVYjusUs5ic3iuL1NVWtLcE36cEjFCSLnMjr5f2U9jSp67ur7ZHHAFRRatWPQOPaSFCe9BEuiMcTs086HBQa12aHRiYL2dqApVVoT6rJkizjWPDQEFcRiuaBJ1YIZ5T-oWADH0YeKE',
+    image: '/images/HAPABLEEN 3.jpg',
     category: 'Wellness',
     features: [
       { title: 'Stimulates Appetite', desc: 'Improves digestion and appetite.', icon: 'restaurant' },
@@ -422,7 +422,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Total Hepatic Restoration',
     shortDesc: 'A non-hormonal liver tonic designed for complete liver protection and cellular detoxification.',
     price: 499,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCmztOcpb8OBs0eWKG4m5vXul03_neHf9Glsg3vmMt4FokIwrMkafgl3K8EynZfXy41HzNeVd4BySU2IY5b6MKMINxW2sCDDU71PN8k2ZRbP3ma70WzkOKj_56TVTEooSoCgdwbRl8JKxxQ0-_gLhxXsSximrOwuUqHRbz0MGoKcae8-Jgm6C_HuvkVif2Fyk7If8HVT_AwdvFOGxiFTQfhRl3ubHmpgXBEI0VvqQ1VkEfAcS70Xkf46HLBv64EM4FAyGZgskgEXmc',
+    image: '/images/Hepableen Tablets.png',
     category: 'Therapeutics',
     features: [
       { title: 'Regenerates Cells', desc: 'Stimulates liver repair.', icon: 'restart_alt' },
@@ -447,7 +447,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'The Triple-Action Liver Protocol',
     shortDesc: 'Complete liver protective supplement formulated for chronic liver conditions and detoxification.',
     price: 899,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCL1ctXL5n9LQVF7OtQnYKkHjG5tEWmFiMVML7qguRvTOMwghVWJDiZ-cexTqQg_F344L3rSruL104hnAICVfHnl0VI9UDeZJ33MRJLPNRi8fU0Gm39Xw56FbNNKh84OpzoxLVdRirsNle5OP9rNXAxKsEgGnq5wuzeRHCDwPE6OjnG-0o5HeXvL3-pQw2QTqsCTIPLWua1HCc-zi3PC0DwOevH_okMY21BpOnnVPS-9TB9AV2NbHeQ960mcN8SrFZjFMfzlbYkPSM',
+    image: '/images/Livercure_2.png',
     category: 'Therapeutics',
     features: [
       { title: 'Comprehensive Protection', desc: 'Shields liver cells from toxins.', icon: 'shield' },
@@ -472,7 +472,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Natural Relief',
     shortDesc: 'Combifore is a premium therapeutic solution specifically engineered for anti-arthritic support and effective pain relief.',
     price: 35,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDoANmldJGN2ei3HxNd-AzSTUKm3xyVLCRDvX_fIRbGMxoe4I7rNsK4h-9azLvGOQycjx1q5YFSATmriZ8LuM-SITFKB85NDXnB96TRZBrUOrBeCfXKaijHV-jmZRtEb1OhN-5q5eOnWfShz_lVblrMQnps_N7Cvio3JSkEW6epKzQ4i37bprMovllgLpIzOSw23Lu3bMQvdJ-7VQLW0gu3ndbHznyCWZF8UJ3zkkJhlYy0yArD54yh7OfUgSbanzltpQkfPppv10M',
+    image: '/images/Combifore_2.png',
     category: 'Therapeutics',
     features: [
       { title: 'Joint Mobility', desc: 'Significantly reduces stiffness in joints.', icon: 'mop' },
@@ -496,7 +496,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Stress Reduction & Memory Enhancement',
     shortDesc: 'A specialized Ayurvedic formulation designed to harmonize neural pathways and enhance cognitive clarity.',
     price: 35,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDBTnEDHyB9yQwgED_IPe-OJCRz5hqBedDCGTtvsAoFX_vxzN7DGSxh8DuwJsg-Ajo8no8jdnLDUq6NXYDw3W2JrUh_q531tJgMae8ccD5rsVbl6vNgXrg-4g9hDNUw0qSmWjzQq3R6PWXaXSVPMbNbLWlLqGmAfWtfNFAu7ZJf3gz3x2mecWDWq_g7ykpgqQfwQNVs_ZzYpOfs3AKgeveOiTDcgF271FDjODEUq89xxqxSsi7429v7KaseutiQfkjD_Nhnipp9jKs',
+    image: '/images/GTP_1.png',
     category: 'Therapeutics',
     features: [
       { title: 'Neural Balance', desc: 'Restores natural neurotransmitter equilibrium.', icon: 'energy_savings_leaf' },
@@ -520,7 +520,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Breathe Easy',
     shortDesc: 'A scientifically formulated therapeutic supplement designed to relieve respiratory tract disorders.',
     price: 25,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCYhYMrFX0Vw_q--1O-65kVdt42Oxv0cSS5yzFOF9Yev_sEvM6Emu5TzVtY-AT3wuci2MCVWrrhlUu_aBsXgE0wc1QIJTTEf8rAwzucmEYes9nr4FHsnIJ6GqbhS3AI5Ppyd5vx-6Sb7_HkVRhHLeLD8SCyqlNU8Iy_-0tVhcqW7VMX2e1jLz8GuLW9H9OFn2OZ9eHymoY5VydRr0m4xb3LQnyGspz18zI4QHzeU4ewf4LTMkBrS6ofXf_smONLgT-7CeU8g_Dgreg',
+    image: '/images/AAcaps_1.png',
     category: 'Therapeutics',
     features: [
       { title: 'Respiratory Relief', desc: 'Helps in clearing the respiratory tract.', icon: 'air' },
@@ -544,7 +544,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Empower Your Metabolism',
     shortDesc: 'Advanced Ayurvedic formulation scientifically designed by Jammi to manage non-insulin dependent diabetes.',
     price: 35,
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/images/Dtabs_2.png',
     category: 'Therapeutics',
     features: [
       { title: 'Improves Insulin Sensitivity', desc: 'Enhances your body\'s natural response to insulin.', icon: 'psychology' },
@@ -568,7 +568,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Women\'s Health',
     shortDesc: 'A specialized phyto-therapeutic formulation to help manage PCOS/PCOD naturally, restoring hormonal harmony.',
     price: 35,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQeL29I0YhQjK14I6F9JkQ614LzF8LqO4oWw1m3R8m-Q6Gq4Y8K1v41Lq5F7sQ4GZtJ5F3A15bX-dJtB_C-FkVn1JvFwC7Xw14v5X-f_mS8LpTqB2Y1c9wMhN1L9Rj19aCgNq8Zk39d48IqP-_G0_Z4X_TmA8JzU_1J-Xy0KjZ9q0T79mN7ZcKpA_2g5bH0vP6VpQ',
+    image: '/images/Cyst_1.png',
     category: 'Therapeutics',
     features: [
       { title: 'Hormonal Balance', desc: 'Restores harmony and ovulatory health.', icon: 'balance' },
@@ -592,7 +592,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Restorative Foot & Heel Balm',
     shortDesc: 'Our rich, buttery balm penetrates thick skin to deeply moisturize dry, cracked heels and fatigued feet.',
     price: 22,
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb046eeb?q=80&w=2000&auto=format&fit=crop',
+    image: '/images/BFF_1.png',
     category: 'Body Care',
     features: [
       { title: 'Heals', desc: 'Repairs cracked heels.', icon: 'eco' },
@@ -616,7 +616,7 @@ export const MOCK_PRODUCTS: any[] = [
     shortDesc: 'A century-old Ayurvedic recipe refined for the modern world. Developed by the master pharmacists at Jammi, our formula uses the cooling properties of Aloe Vera and the restorative power of Saffron to protect your skin from the harshest sun.',
     price: 845,
     originalPrice: 1150,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBm508BgjDHuNGWt_cPbUkhQswp9cjvrurYR13TBYGw2sDMR87twhpwAFqZWMBX3iSXXl1yfhcY3MXb_REPbmv-ysmY6oEyxw10vmzqA7K4YGyt5yloTDtsu6N_Zgc50oHO3jETacSwnAi6Z3QP_vcFfV5rZ1Zlb-CyXaRq_x0h86x5FknFX13B7Rxrvr7NyF2PJn3JIzwk0FHqIJebDNSlCmLJgZ0Kz4YAuRvupop_P0ZVkMP0pcmV75VXeJW0BZZtURUCCeF70gA',
+    image: '/images/UVSafe.png',
     category: 'Skin & Hair Care',
     features: [
       { title: 'Triple-Shield Protection', desc: 'Broad spectrum defense against UVA, UVB, and Blue Light.', icon: 'shield_moon' },
@@ -644,7 +644,7 @@ export const MOCK_PRODUCTS: any[] = [
     shortDesc: 'A restorative Ayurvedic formula crafted with pure Guggul and Ashwagandha. Experience a visible transformation as it targets fine lines and restores your skin\'s youthful radiance.',
     price: 85,
     originalPrice: null,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA0u2y3Yd2aIMMO9Wjj1ILe040OyX-3Q8826DPzRaJeWNi5xaqGgjRcOirvD8y8BEZH6v8lYemFvPtXoIUp5swTLbEBMxhk6ruQDGBx4q0lfaEI3y2R_My2jZMGpFKwOzXond5krqb6ZZbYx0nPdIiU1SolZJoFk_Q75VojKGIq27J5XPdA2NhCCrgz1cKmjJymarz6AKajvDyPGbnBPZIFSHes8i16pM-2H3P-CDbHtBCBrvbw1hvUHzc2y1YDCSDbNe7zi2QJJu0',
+    image: '/images/Timeless.png',
     category: 'Skin & Hair Care',
     features: [
       { title: 'Reduces Wrinkles', desc: 'Clinically proven to reduce the depth of fine lines and visible wrinkles within 4 weeks of consistent use.', icon: 'auto_fix_high' },
@@ -671,7 +671,7 @@ export const MOCK_PRODUCTS: any[] = [
     label: 'Premium Heritage Lip Care',
     shortDesc: 'A luxurious lip butter enriched with natural emollients. Provides deep hydration and protection for soft, supple lips all day long. 15g.',
     price: 180,
-    image: 'https://cdn.discordapp.com/attachments/1314959419106037804/1342603418293706853/image.png?ex=67ba372d&is=67b8e5ad&hm=a09848f219d3fbc19c8fdd30733d98bd267c7e3f84f04c632890532570d8a59f&',
+    image: '/images/SoftLips_1.png',
     category: 'Skin & Hair Care',
     features: [
       { title: 'Intense Hydration', desc: 'Deeply moisturizes for soft, supple lips.', icon: 'water_drop' },
@@ -699,7 +699,7 @@ export const MOCK_PRODUCTS: any[] = [
     shortDesc: 'A powerful blend of saffron and 25 precious herbs. Lightens pigmentation, reduces fine lines, and imparts a natural, golden glow.',
     price: 95,
     originalPrice: 120,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDFXwSDBiF-wO4u5p8xQ8XUeG_1tCHu_71Z1IeXWz7_x0Gz5w1BxgXnO9y_2x5xL-_u3E5yq0I8Jc2r1Y8-yAxeW-_zG4B_3m6_b1eT7g0M7U9x6P1Dxe1e9Gv1P6d_4QJ-eT9v2x',
+    image: '/images/Kumkumadi Serum.jpeg',
     category: 'Skin & Hair Care',
     features: [
       { title: 'Fades Pigmentation', desc: 'Targeted action against dark spots and uneven skin tone.', icon: 'auto_fix_high' },
@@ -727,7 +727,7 @@ export const MOCK_PRODUCTS: any[] = [
     shortDesc: 'A traditional Ayurvedic hair oil infused with Bhringraj and Amla. Stops hair fall, prevents premature greying, and stimulates new hair growth.',
     price: 34,
     originalPrice: 45,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB3V_fA-Q0O2B9B3pXo3sM_AItP5Q_wX2y9d1L9d6r2y_u2-9bO4Cg2_C-b9L5tYvR6uA1iA2_s9oBxUvK2R9mX5qT6vU7wO5H7uE5pQ0H8bC2mD1fG7kL4jP1vN5hC_Q3m1_K4W9eK',
+    image: '/images/KeshPro.png',
     category: 'Skin & Hair Care',
     features: [
       { title: 'Reduces Hair Fall', desc: 'Strengthens roots and minimizes breakage significantly.', icon: 'local_florist' },
@@ -755,7 +755,7 @@ export const MOCK_PRODUCTS: any[] = [
     shortDesc: 'Our signature complexion cream is a lightweight, non-greasy formula that deeply hydrates while brightening the skin tone. Infused with ancient botanicals, it reveals your natural radiance after just one application.',
     price: 72,
     originalPrice: 85,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDgjT7AoRNd4aFySXJrQjUiE7EqOAY-HqA-bwX7yJ32hLUEgBGrH0lwI7tU6_jf3X4dvB_8Bjm2L5tW8VL_YpMmGhslFxy9098C8S8KtnkI4cKeAbFOlGOPaO5x0zHonIn3_HxoGEOWTg4xr9oPYusDKdyy3laz-k7l1u3jbcSZeVxs1-gOhtcaPEVKIyzMm5dXfKHtYrJxiz0EJJQ5L4jXMmbA1bWO4cu_HSV0-VpvGzQLZrofJcZ3U1OQkaMXMDhzLulRZfjkdZg',
+    image: '/images/Glow.png',
     category: 'Skin & Hair Care',
     features: [
       { title: 'Evens Skin Tone', desc: 'Targeted saffron extract works to reduce dark spots and hyperpigmentation for a balanced complexion.', icon: 'sparkles' },
@@ -783,7 +783,7 @@ export const MOCK_PRODUCTS: any[] = [
     shortDesc: 'A potent weekly ritual designed to restore skin elasticity and natural radiance. This dual-action pack combines ancient Ayurvedic wisdom with modern dermatological science to detoxify pores and firm the facial contours.',
     price: 84,
     originalPrice: null,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB4h8YuX-E8GKWiwb7fjmhnNfJADN0IkF-SOOlWQ5SkdgGNMCOOV5GRvDx2z0M3fb_Zf3vW2r2xxZrRAqLpCB-tmaQwX_WoYXRllutfFX-xOz69_qSkx4tE3H1ZswkCXIkisDnavNx7M8SmlBOrGNsOlzcuvkiY7JWYDnhaCdzUFGZroAQszT7c7lsKfvZlBZff1Limd_-sI_tYtfF6DTEXRNvSydRvUDpViNB-4-VqXZSkbvDrMfnWS95U0jgSXP3eev2POiC0YTU',
+    image: '/images/Flawless.png',
     category: 'Skin & Hair Care',
     features: [
       { title: 'Skin Firming', desc: 'Promotes collagen production and tightens the appearance of sagging skin for a lifted look.', icon: 'dry_cleaning' },

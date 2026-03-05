@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(public)/layout,_N_T_/(public)/product/layout,_N_T_/(public)/product/gtp-mental-fitness/layout,_N_T_/(public)/product/gtp-mental-fitness/page,_N_T_/product/gtp-mental-fitness"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHB1YmxpYyk/product/gtp-mental-fitness/__PAGE__",
+    "/!KHB1YmxpYyk/product/gtp-mental-fitness",
+    "/!KHB1YmxpYyk/product",
+    "/!KHB1YmxpYyk",
+    "/_index",
+    "/_head"
+  ]
+}

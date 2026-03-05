@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/itzme/OneDrive/Desktop/jammi/jammi_1/app/%28public%29/page.tsx"],"sourcesContent":["import Home from '../_pages_legacy/Home';\r\n\r\nexport default function Page() {\r\n    return <Home />;\r\n}\r\n"],"names":[],"mappings":";;;;;;;;;;;;AAEe,SAAS;IACpB,qBAAO,8OAAC;;;;;AACZ"}}]
+}

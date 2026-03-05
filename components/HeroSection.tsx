@@ -1,6 +1,7 @@
+"use client";
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const HeroSection: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const HeroSection: React.FC = () => {
             Where ancient wisdom meets modern science. Discover the gold standard of Ayurvedic healing, perfected through generations.
           </p>
           <div className="flex flex-wrap gap-6 pt-4">
-            <Link to="/shop" className="px-10 py-5 bg-saffron text-white font-bold text-lg rounded-full hover:bg-white hover:text-forest transition-all duration-300 shadow-xl shadow-black/20 text-center">
+            <Link href="/shop" className="px-10 py-5 bg-saffron text-white font-bold text-lg rounded-full hover:bg-white hover:text-forest transition-all duration-300 shadow-xl shadow-black/20 text-center">
               Shop the Collection
             </Link>
             <button className="px-10 py-5 border border-white/30 text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all">

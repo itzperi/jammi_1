@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(public)/layout,_N_T_/(public)/product/layout,_N_T_/(public)/product/keshpro-oil/layout,_N_T_/(public)/product/keshpro-oil/page,_N_T_/product/keshpro-oil"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHB1YmxpYyk/product/keshpro-oil/__PAGE__",
+    "/!KHB1YmxpYyk/product/keshpro-oil",
+    "/!KHB1YmxpYyk/product",
+    "/!KHB1YmxpYyk",
+    "/_index",
+    "/_head"
+  ]
+}

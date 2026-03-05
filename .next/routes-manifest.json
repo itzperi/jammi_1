@@ -1,0 +1,317 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/product/[id]",
+      "regex": "^/product/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/product/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/checkout",
+      "regex": "^/checkout(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/checkout(?:/)?$"
+    },
+    {
+      "page": "/consultation",
+      "regex": "^/consultation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/consultation(?:/)?$"
+    },
+    {
+      "page": "/doctors",
+      "regex": "^/doctors(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/doctors(?:/)?$"
+    },
+    {
+      "page": "/federation",
+      "regex": "^/federation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/federation(?:/)?$"
+    },
+    {
+      "page": "/heritage",
+      "regex": "^/heritage(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/heritage(?:/)?$"
+    },
+    {
+      "page": "/partners",
+      "regex": "^/partners(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/partners(?:/)?$"
+    },
+    {
+      "page": "/product/aa-caps",
+      "regex": "^/product/aa\\-caps(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/aa\\-caps(?:/)?$"
+    },
+    {
+      "page": "/product/bff-balm",
+      "regex": "^/product/bff\\-balm(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/bff\\-balm(?:/)?$"
+    },
+    {
+      "page": "/product/clear-marks",
+      "regex": "^/product/clear\\-marks(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/clear\\-marks(?:/)?$"
+    },
+    {
+      "page": "/product/combifore",
+      "regex": "^/product/combifore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/combifore(?:/)?$"
+    },
+    {
+      "page": "/product/crush-n-brush",
+      "regex": "^/product/crush\\-n\\-brush(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/crush\\-n\\-brush(?:/)?$"
+    },
+    {
+      "page": "/product/cyst-evit",
+      "regex": "^/product/cyst\\-evit(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/cyst\\-evit(?:/)?$"
+    },
+    {
+      "page": "/product/d-tabs",
+      "regex": "^/product/d\\-tabs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/d\\-tabs(?:/)?$"
+    },
+    {
+      "page": "/product/daily-dew",
+      "regex": "^/product/daily\\-dew(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/daily\\-dew(?:/)?$"
+    },
+    {
+      "page": "/product/flawless-pack",
+      "regex": "^/product/flawless\\-pack(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/flawless\\-pack(?:/)?$"
+    },
+    {
+      "page": "/product/glow-complexion-cream",
+      "regex": "^/product/glow\\-complexion\\-cream(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/glow\\-complexion\\-cream(?:/)?$"
+    },
+    {
+      "page": "/product/gtp-mental-fitness",
+      "regex": "^/product/gtp\\-mental\\-fitness(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/gtp\\-mental\\-fitness(?:/)?$"
+    },
+    {
+      "page": "/product/hepableen-syrup",
+      "regex": "^/product/hepableen\\-syrup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/hepableen\\-syrup(?:/)?$"
+    },
+    {
+      "page": "/product/hepableen-tablets",
+      "regex": "^/product/hepableen\\-tablets(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/hepableen\\-tablets(?:/)?$"
+    },
+    {
+      "page": "/product/keshpro-oil",
+      "regex": "^/product/keshpro\\-oil(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/keshpro\\-oil(?:/)?$"
+    },
+    {
+      "page": "/product/kumkumadi-serum",
+      "regex": "^/product/kumkumadi\\-serum(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/kumkumadi\\-serum(?:/)?$"
+    },
+    {
+      "page": "/product/laksha-capsules",
+      "regex": "^/product/laksha\\-capsules(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/laksha\\-capsules(?:/)?$"
+    },
+    {
+      "page": "/product/livercure",
+      "regex": "^/product/livercure(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/livercure(?:/)?$"
+    },
+    {
+      "page": "/product/madhuchari-churna",
+      "regex": "^/product/madhuchari\\-churna(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/madhuchari\\-churna(?:/)?$"
+    },
+    {
+      "page": "/product/mahanarayana",
+      "regex": "^/product/mahanarayana(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/mahanarayana(?:/)?$"
+    },
+    {
+      "page": "/product/nilomit",
+      "regex": "^/product/nilomit(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/nilomit(?:/)?$"
+    },
+    {
+      "page": "/product/orthoraksha",
+      "regex": "^/product/orthoraksha(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/orthoraksha(?:/)?$"
+    },
+    {
+      "page": "/product/pyril-ds",
+      "regex": "^/product/pyril\\-ds(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/pyril\\-ds(?:/)?$"
+    },
+    {
+      "page": "/product/redema",
+      "regex": "^/product/redema(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/redema(?:/)?$"
+    },
+    {
+      "page": "/product/soft-lips",
+      "regex": "^/product/soft\\-lips(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/soft\\-lips(?:/)?$"
+    },
+    {
+      "page": "/product/suventris",
+      "regex": "^/product/suventris(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/suventris(?:/)?$"
+    },
+    {
+      "page": "/product/thyrogard",
+      "regex": "^/product/thyrogard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/thyrogard(?:/)?$"
+    },
+    {
+      "page": "/product/timeless-anti-ageing",
+      "regex": "^/product/timeless\\-anti\\-ageing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/timeless\\-anti\\-ageing(?:/)?$"
+    },
+    {
+      "page": "/product/trip-caps",
+      "regex": "^/product/trip\\-caps(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/trip\\-caps(?:/)?$"
+    },
+    {
+      "page": "/product/triphala-churna",
+      "regex": "^/product/triphala\\-churna(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/triphala\\-churna(?:/)?$"
+    },
+    {
+      "page": "/product/uvsafe-sunscreen",
+      "regex": "^/product/uvsafe\\-sunscreen(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/uvsafe\\-sunscreen(?:/)?$"
+    },
+    {
+      "page": "/product/widari-forte",
+      "regex": "^/product/widari\\-forte(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/widari\\-forte(?:/)?$"
+    },
+    {
+      "page": "/product/yummunity",
+      "regex": "^/product/yummunity(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/yummunity(?:/)?$"
+    },
+    {
+      "page": "/product/zeer-alka",
+      "regex": "^/product/zeer\\-alka(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/product/zeer\\-alka(?:/)?$"
+    },
+    {
+      "page": "/shop",
+      "regex": "^/shop(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/shop(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

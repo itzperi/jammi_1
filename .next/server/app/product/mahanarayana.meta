@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(public)/layout,_N_T_/(public)/product/layout,_N_T_/(public)/product/mahanarayana/layout,_N_T_/(public)/product/mahanarayana/page,_N_T_/product/mahanarayana"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHB1YmxpYyk/product/mahanarayana/__PAGE__",
+    "/!KHB1YmxpYyk/product/mahanarayana",
+    "/!KHB1YmxpYyk/product",
+    "/!KHB1YmxpYyk",
+    "/_index",
+    "/_head"
+  ]
+}
