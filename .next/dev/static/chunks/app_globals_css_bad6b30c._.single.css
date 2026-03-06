@@ -6648,6 +6648,12 @@
   }
 
   @media (min-width: 40rem) {
+    .sm\:bg-transparent {
+      background-color: #0000;
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:p-0 {
       padding: calc(var(--spacing) * 0);
     }
@@ -6812,6 +6818,14 @@
   @media (min-width: 40rem) {
     .sm\:text-\[14px\] {
       font-size: 14px;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:backdrop-blur-none {
+      --tw-backdrop-blur: ;
+      -webkit-backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
+      backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
     }
   }
 

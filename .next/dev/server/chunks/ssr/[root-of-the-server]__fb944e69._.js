@@ -83,9 +83,9 @@ function FoundersPage() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "rounded-[2rem] w-full aspect-[4/5] object-cover shadow-2xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                        src: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2670&auto=format&fit=crop",
+                                        src: "/images/founder_1.png",
                                         alt: "Dr. Narasimham Jammi",
-                                        className: "w-full h-full object-cover"
+                                        className: "w-full h-full object-cover object-top"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(public)/founders/page.tsx",
                                         lineNumber: 31,
@@ -348,9 +348,9 @@ function FoundersPage() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "rounded-[2rem] w-full aspect-[4/5] object-cover shadow-2xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                        src: "https://images.unsplash.com/photo-1594824436951-7f12bcceea15?q=80&w=2670&auto=format&fit=crop",
+                                        src: "/images/founder_2.jpg",
                                         alt: "Dr. Anitha Balachander",
-                                        className: "w-full h-full object-cover"
+                                        className: "w-full h-full object-cover object-top"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(public)/founders/page.tsx",
                                         lineNumber: 117,

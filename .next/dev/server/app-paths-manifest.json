@@ -1,8 +1,12 @@
 {
+  "/(public)/checkout/page": "app/(public)/checkout/page.js",
   "/(public)/federation/page": "app/(public)/federation/page.js",
+  "/(public)/founders/page": "app/(public)/founders/page.js",
   "/(public)/heritage/page": "app/(public)/heritage/page.js",
   "/(public)/page": "app/(public)/page.js",
   "/(public)/partners/page": "app/(public)/partners/page.js",
   "/(public)/product/[id]/page": "app/(public)/product/[id]/page.js",
-  "/(public)/shop/page": "app/(public)/shop/page.js"
+  "/(public)/shop/page": "app/(public)/shop/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/page": "app/admin/page.js"
 }
