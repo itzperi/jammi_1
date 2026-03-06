@@ -107,9 +107,9 @@ const Home: React.FC = () => {
           <div className="relative mx-auto mt-12 lg:mt-0 w-full max-w-lg lg:max-w-full rotate-2 hover:rotate-0 transition-transform duration-700">
             <div className="absolute inset-0 bg-saffron translate-x-4 translate-y-4 lg:translate-x-6 lg:translate-y-6 shadow-2xl"></div>
             <img
-              src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=800"
+              src="/images/tamil_doctor_lab.png"
               alt="Jammi Authentic Lab"
-              className="relative z-10 w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
+              className="relative z-10 w-full aspect-[4/5] object-cover hover:grayscale-0 transition-all duration-700 shadow-2xl"
             />
           </div>
         </div>
@@ -198,7 +198,7 @@ const Home: React.FC = () => {
           <div className="relative mx-auto mt-12 lg:-mt-10 lg:-mr-10 xl:-mr-20">
             <div className="aspect-[4/5] overflow-hidden -rotate-2 w-full max-w-sm sm:max-w-md lg:max-w-lg shadow-2xl relative z-10 border-8 border-white group">
               <img
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800"
+                src="/images/tamil_doctor_consultation.png"
                 alt="Ayurveda Practitioner"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
@@ -258,9 +258,9 @@ const Home: React.FC = () => {
           <div className="relative mx-auto mt-12 lg:mt-0 w-full max-w-sm sm:max-w-md lg:max-w-full lg:ml-auto perspective-1000">
             <div className="absolute inset-0 bg-transparent border-4 border-saffron translate-x-6 translate-y-6 lg:translate-x-8 lg:translate-y-8 z-0"></div>
             <img
-              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800"
+              src="/images/tamil_doctor_group.png"
               alt="Confident Practitioner"
-              className="relative z-10 w-full aspect-square sm:aspect-[4/5] object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700 shadow-2xl"
+              className="relative z-10 w-full aspect-[4/5] sm:aspect-[4/5] object-cover hover:opacity-100 transition-all duration-700 shadow-2xl"
             />
           </div>
 

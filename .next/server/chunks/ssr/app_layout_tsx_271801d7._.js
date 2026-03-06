@@ -1,3 +1,0 @@
-module.exports=[33290,a=>{"use strict";var b=a.i(7997);function c({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsx)("body",{className:"antialiased min-h-screen flex flex-col bg-background-light font-sans text-[#1a150f]",children:(0,b.jsx)("main",{className:"flex-grow",children:a})})})}a.s(["default",()=>c,"metadata",0,{title:"Jammi Pharmaceuticals",description:"127-year-old Ayurvedic pharmaceutical company blending traditional Indian medicine with modern molecular science"}])}];
-
-//# sourceMappingURL=app_layout_tsx_271801d7._.js.map

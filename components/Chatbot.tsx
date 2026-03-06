@@ -1,18 +1,25 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { MOCK_PRODUCTS } from '../constants';
 
 interface Message {
     id: string;
     sender: 'user' | 'bot';
     text: string;
     isAction?: boolean;
+    product?: {
+        name: string;
+        image: string;
+        link: string;
+        price: string;
+    };
 }
 
 const SUGGESTED_QUESTIONS = [
+    "I have a skin issue",
     "What is LiverCure?",
     "Book Consultation",
-    "How does Ashwagandha help?",
     "Products for hair fall?"
 ];
 
@@ -27,6 +34,7 @@ export default function Chatbot() {
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
+    const [hasUnread, setHasUnread] = useState(true);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -36,6 +44,11 @@ export default function Chatbot() {
     useEffect(() => {
         scrollToBottom();
     }, [messages, isOpen, isTyping]);
+
+    const handleToggle = () => {
+        setIsOpen(!isOpen);
+        if (!isOpen) setHasUnread(false);
+    };
 
     const handleSend = (text: string) => {
         if (!text.trim()) return;
@@ -49,21 +62,58 @@ export default function Chatbot() {
         setTimeout(() => {
             let botResponse = "I'm still learning the intricacies of our 128-year-old pharmacopoeia. Please consult our expert Vaidyas for profound medical advice.";
             let isAction = false;
+            let productData: Message['product'] = undefined;
             const lowerText = text.toLowerCase();
 
             if (lowerText.includes('livercure') || lowerText.includes('liver')) {
                 botResponse = "LiverCure is our flagship formulation designed to protect and rejuvenate the liver. It's particularly effective for fatty liver and sluggish digestion.";
             } else if (lowerText.includes('consultation') || lowerText.includes('book')) {
-                botResponse = "I can help you with that. You can book an online video consultation or an offline clinic visit.";
+                botResponse = "I can help you with that. You can book an online video consultation or an offline clinic visit with our expert Vaidyas.";
                 isAction = true;
-            } else if (lowerText.includes('ashwagandha')) {
-                botResponse = "Ashwagandha is a powerful adaptogen that helps the body manage stress, improves cognitive function, and boosts overall vitality.";
-            } else if (lowerText.includes('hair')) {
-                botResponse = "For hair fall, we usually recommend our Neelibringadi Thailam for external application, along with internal tonics to balance Pitta dosha.";
+            } else {
+                // Determine search terms logic: scan MOCK_PRODUCTS
+                const searchKeywords = lowerText.split(' ').filter(w => w.length > 3);
+
+                // Fallback words if exact split fails
+                if (lowerText.includes('hair')) searchKeywords.push('hair');
+                if (lowerText.includes('skin') || lowerText.includes('acne') || lowerText.includes('glow')) searchKeywords.push('skin', 'glow', 'acne', 'complexion');
+                if (lowerText.includes('joint') || lowerText.includes('pain') || lowerText.includes('knee')) searchKeywords.push('joint', 'ortho', 'pain', 'arthritis');
+                if (lowerText.includes('liver') || lowerText.includes('digestion') || lowerText.includes('stomach')) searchKeywords.push('liver', 'digestion', 'stomach', 'hepableen');
+                if (lowerText.includes('sugar') || lowerText.includes('diabet')) searchKeywords.push('sugar', 'metabolism');
+
+                let bestMatch = null;
+                let maxScore = 0;
+
+                for (const prod of MOCK_PRODUCTS) {
+                    let score = 0;
+                    const searchableText = `${prod.name} ${prod.category} ${prod.shortDesc} ${prod.label} ${prod.features?.map((f: any) => f.title + f.desc).join(' ')}`.toLowerCase();
+
+                    for (const keyword of searchKeywords) {
+                        if (searchableText.includes(keyword)) {
+                            score += 1;
+                        }
+                    }
+
+                    if (score > maxScore) {
+                        maxScore = score;
+                        bestMatch = prod;
+                    }
+                }
+
+                if (bestMatch && maxScore > 0) {
+                    botResponse = `Based on what you've mentioned, I highly recommend looking into ${bestMatch.name}. It is specifically crafted for this concern.`;
+                    productData = {
+                        name: bestMatch.name,
+                        image: bestMatch.image,
+                        link: `/product/${bestMatch.id}`,
+                        price: `₹${bestMatch.price}`
+                    };
+                }
             }
 
-            setMessages(prev => [...prev, { id: (Date.now() + 1).toString(), sender: 'bot', text: botResponse, isAction }]);
+            setMessages(prev => [...prev, { id: (Date.now() + 1).toString(), sender: 'bot', text: botResponse, isAction, product: productData }]);
             setIsTyping(false);
+            if (!isOpen) setHasUnread(true);
         }, 1200);
     };
 
@@ -74,18 +124,33 @@ export default function Chatbot() {
 
     return (
         <>
+            {/* Overlay to cleanly close chatbot on mobile click-away */}
+            {isOpen && (
+                <div
+                    className="fixed inset-0 z-40 bg-black/10 backdrop-blur-sm sm:bg-transparent sm:backdrop-blur-none"
+                    onClick={() => setIsOpen(false)}
+                    aria-hidden="true"
+                />
+            )}
+
             {/* Floating Action Button */}
             <button
-                onClick={() => setIsOpen(!isOpen)}
+                type="button"
+                onClick={handleToggle}
                 className={`fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-secondary text-white shadow-2xl flex items-center justify-center transition-transform duration-300 hover:scale-105 ${isOpen ? 'rotate-90 scale-0 opacity-0 pointer-events-none' : 'rotate-0 scale-100 opacity-100'}`}
                 aria-label="Open Chat"
             >
-                <span className="material-symbols-outlined text-3xl">forum</span>
+                <div className="relative">
+                    <span className="material-symbols-outlined text-3xl">forum</span>
+                    {hasUnread && (
+                        <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-secondary animate-pulse"></span>
+                    )}
+                </div>
             </button>
 
             {/* Chat Window */}
             <div
-                className={`fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 w-[calc(100vw-3rem)] sm:w-[400px] h-[600px] max-h-[80vh] bg-white rounded-3xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right ${isOpen ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-75 opacity-0 pointer-events-none'}`}
+                className={`fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 w-[calc(100vw-3rem)] sm:w-[400px] h-[600px] max-h-[85vh] bg-white rounded-3xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right ${isOpen ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-75 opacity-0 pointer-events-none'}`}
             >
                 {/* Header */}
                 <div className="bg-secondary p-4 flex items-center justify-between text-white shrink-0">
@@ -112,11 +177,23 @@ export default function Chatbot() {
                         <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                             <div
                                 className={`max-w-[85%] rounded-2xl p-4 shadow-sm ${msg.sender === 'user'
-                                        ? 'bg-primary text-white rounded-br-sm'
-                                        : 'bg-white border border-slate-200 text-slate-700 rounded-bl-sm'
+                                    ? 'bg-primary text-white rounded-br-sm'
+                                    : 'bg-white border border-slate-200 text-slate-700 rounded-bl-sm'
                                     }`}
                             >
                                 <p className="text-sm leading-relaxed">{msg.text}</p>
+
+                                {msg.product && (
+                                    <Link href={msg.product.link} onClick={() => setIsOpen(false)} className="mt-3 block bg-slate-50 border border-slate-200 rounded-xl overflow-hidden hover:border-primary transition-colors group">
+                                        <div className="aspect-[4/3] bg-slate-100 overflow-hidden relative">
+                                            <img src={msg.product.image} alt={msg.product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        </div>
+                                        <div className="p-3">
+                                            <h4 className="font-bold text-slate-800 text-sm leading-tight">{msg.product.name}</h4>
+                                            <p className="text-primary font-bold text-xs mt-1">{msg.product.price}</p>
+                                        </div>
+                                    </Link>
+                                )}
 
                                 {msg.isAction && msg.text.includes('consultation') && (
                                     <Link

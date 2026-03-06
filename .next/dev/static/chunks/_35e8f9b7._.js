@@ -325,7 +325,7 @@ const MOCK_PRODUCTS = [
         label: 'Kidney Health & Urinary Alkaliser',
         shortDesc: 'Natural Urinary Alkaliser and Kidney Support. 200ml bottle.',
         price: 220,
-        image: 'https://cdn.discordapp.com/attachments/1314959419106037804/1342621020759556138/image.png?ex=67ba4792&is=67b8f612&hm=1ac0e2f50a41dadae646f90dcfc47087f97576a17b07548ec2ee5e638128eebe&',
+        image: '/images/ZeerAlka_1.png',
         category: 'Therapeutics',
         features: [
             {

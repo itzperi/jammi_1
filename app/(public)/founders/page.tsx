@@ -29,9 +29,9 @@ export default function FoundersPage() {
                         {/* Replace with actual image of Dr. Narasimham Jammi */}
                         <div className="rounded-[2rem] w-full aspect-[4/5] object-cover shadow-2xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
                             <img
-                                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2670&auto=format&fit=crop"
+                                src="/images/founder_1.png"
                                 alt="Dr. Narasimham Jammi"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover object-top"
                             />
                         </div>
                         <div className="absolute top-6 left-6 w-16 h-16 bg-white/90 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/50 shadow-lg">
@@ -115,9 +115,9 @@ export default function FoundersPage() {
                         {/* Replace with actual image of Dr. Anitha Balachander */}
                         <div className="rounded-[2rem] w-full aspect-[4/5] object-cover shadow-2xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
                             <img
-                                src="https://images.unsplash.com/photo-1594824436951-7f12bcceea15?q=80&w=2670&auto=format&fit=crop"
+                                src="/images/founder_2.jpg"
                                 alt="Dr. Anitha Balachander"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover object-top"
                             />
                         </div>
                         <div className="absolute bottom-6 right-6 w-16 h-16 bg-white/90 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/50 shadow-lg">

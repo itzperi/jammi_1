@@ -1,6 +1,25 @@
 {
-  "app": {},
-  "appUsingSizeAdjust": false,
+  "app": {
+    "[project]/app/(public)/federation/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/app/(public)/heritage/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/app/(public)/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/app/(public)/partners/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/app/(public)/product/[id]/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/app/(public)/shop/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
   "pages": {},
   "pagesUsingSizeAdjust": false
 }

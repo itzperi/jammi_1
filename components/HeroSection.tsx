@@ -25,11 +25,11 @@ const HeroSection: React.FC = () => {
         </div>
         <div className="relative hidden lg:block">
           <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-2">
-            <img alt="Ayurvedic Herbs Overhead" className="w-full h-auto object-cover aspect-[4/5] shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcrhanMvu5BwZKPN0WBQETZeYKINsiDlP7_Jf2o1ueVhkQkaxDmK-QB5tekh0atVnPpW4md3059Cj9Jefb3duK30An1sxKn7NypPRT4lGGOkYtgwVutcGFY4zpJTdXOaZyt-u6qqug1_VzycjfjBCS2nEQpBEigjBAMYQwODfrh-d_dykBHHk6U4AiGRmhoS-dgbHiFOLBWj2KJRdGKidno9Xe70r5u54SpJCYX2wk9j1xk9nbqEkebea2SGtaDWwau8dvJGTKAmQ"/>
+            <img alt="Indian Ayurvedic Wellness" className="w-full h-auto object-cover aspect-[4/5] shadow-inner" src="https://images.unsplash.com/photo-1618677603286-0ec56cb6e1b5?q=80&w=1200&auto=format&fit=crop" />
             <div className="absolute inset-0 bg-black/5"></div>
           </div>
           <div className="absolute -bottom-12 -left-20 z-20 w-72 aspect-[3/4] rounded-xl overflow-hidden shadow-2xl transform -rotate-6 border-4 border-white/10">
-            <img alt="Jammi Glass Bottle" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1zitHt_v0ndbw8MiOLwFRMMSN4w1fY7IhpTivcaiMDu_oOqJrzmpZCnF58sj6ODckdbHlyiUkOUtfAjgPCqtdavgJlK76_Epmw4XcGqdIE2FnwDeFeC9b38itfAffYTbAEnc1xej--uYAnSGxRZxfgE56cnyKlifitqWMmjKa_2l6yKXDwhx1atcflGGXRqa_w1NituPvdAoqOS0irf4d1yYL2pGxG9TdbfuNSRR-qzZOaJK3mgjlVGxqLrfnY4_LGRxwkhpSqyE"/>
+            <img alt="Jammi Glass Bottle" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1zitHt_v0ndbw8MiOLwFRMMSN4w1fY7IhpTivcaiMDu_oOqJrzmpZCnF58sj6ODckdbHlyiUkOUtfAjgPCqtdavgJlK76_Epmw4XcGqdIE2FnwDeFeC9b38itfAffYTbAEnc1xej--uYAnSGxRZxfgE56cnyKlifitqWMmjKa_2l6yKXDwhx1atcflGGXRqa_w1NituPvdAoqOS0irf4d1yYL2pGxG9TdbfuNSRR-qzZOaJK3mgjlVGxqLrfnY4_LGRxwkhpSqyE" />
           </div>
           <div className="absolute -right-10 top-20 w-64 h-64 bg-black/20 blur-3xl rounded-full -z-10"></div>
         </div>
